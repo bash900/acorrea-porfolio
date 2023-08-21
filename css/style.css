@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+}
+
+main {
+  position: relative;
+  background: linear-gradient(to right,
+      #ffffff calc(100% / 3),
+      #f9f9f9 calc(100% / 3),
+      #f9f9f9 calc((100% / 3) + (100% / 3)),
+      #d3d3d3 calc((100% / 3) + (100% / 3)),
+      #d3d3d3);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main .container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 85%;
+  }
+}
+
+
+
+main .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+main .container header .logo h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Rock Salt', cursive;
+}
+
+main .container header nav i {
+  font-size: 30px;
+  color: black;
+  display: none;
+}
+
+main .container header nav ul {
+  display: flex;
+
+}
+
+main .container header nav ul li {
+  margin-left: 40px;
+  font-size: 18px;
+  height: 70px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main .container header nav ul li:not(:last-of-type)::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: -110%;
+  top: 90%;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+main .container header nav ul li:not(:last-of-type):hover::after {
+  left: 0;
+}
+
+main .container header nav ul li.btn {
+  border: 1px solid black;
+  padding: 0 10px;
+  border-radius: 41px;
+  height: 50px;
+  align-self: center;
+  transition: 0.4s ease-in-out;
+  margin-left: 50px;
+}
+
+main .container header nav ul li.btn a {
+  color: black;
+  transition: 0.4s ease-in-out;
+}
+
+main .container header nav ul li.btn:hover {
+  background-color: black;
+}
+
+main .container header nav ul li.btn:hover a {
+  color: #fff;
+}
+
+@media (max-width:992px) {
+  main .container header nav {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+
+  main .container header nav ul {
+    display: none;
+  }
+
+  main .container header nav i {
+    display: flex;
+    align-self: center;
+  }
+
+  main .container header nav i:hover+ul,
+  main .container header nav ul:hover {
+    background: #00000059;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 40%;
+    z-index: 1202;
+  }
+
+  main .container header nav ul li {
+    width: 70%;
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  main .container header nav ul li.btn {
+    margin-left: 0;
+  }
+
+}
+
+main .container .flip-text {
+  width: fit-content;
+  font-size: 18px;
+  text-transform: capitalize;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  left: -150px;
+}
+
+@media (max-width:952px) {
+  main .container .flip-text {
+    left: -150px;
+  }
+}
+
+@media (max-width:592px) {
+  main .container .flip-text {
+    display: none;
+    left: -150px;
+  }
+}
+
+.social {
+  height: 100px;
+  width: fit-content;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -105%;
+}
+
+@media (max-width:420px) {
+  .social {
+    right: -100%;
+  }
+}
+
+main .container .social i.fa-brands {
+  font-size: 22px;
+  transition: 0.4s ease-in-out;
+
+}
+
+main .container .social i.fa-brands:hover {
+  transform: translateX(-3px) scale(1.2);
+
+}
+
+
+main .container .text h1 {
+  font-family: 'Merienda', cursive;
+  font-size: 130px;
+  margin-bottom: 30px;
+}
+
+main .container .text h2 {
+  width: fit-content;
+  letter-spacing: 30.0px;
+  word-spacing: 10.9px;
+  padding: 10px 10px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+main .container .text .btn {
+  width: fit-content;
+  margin-top: 40px;
+  flex-direction: row-reverse;
+}
+
+main .container .text .btn:hover .c {
+  background-color: #000;
+  color: #fff;
+}
+
+main .container .text .btn .c {
+  width: 65px;
+  height: 65px;
+  border: 1px solid black;
+  margin-right: 20px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+main .container .image {
+  min-width: 50%;
+  max-width: 650px;
+  position: relative;
+  top: -33%;
+  right: -54%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+@media (max-width:1200px) {
+  main .container .image {
+    display: none;
+  }
+
+  main .container .text {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  main .container .text .btn {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+@media (max-width:778px) {
+  main .container .text h1 {
+    font-size: 100px;
+  }
+
+  main .container .text h2 {
+    letter-spacing: 15px;
+    font-size: 18px;
+
+  }
+
+  main .container .text .btn {
+    margin: 40px auto;
+
+  }
+}
+
+@media (min-width:300px) and (max-width:550px) {
+  main .container .text h1 {
+    font-size: 65px;
+  }
+
+  main .container .text h2 {
+    letter-spacing: 6px;
+    font-size: 16px;
+  }
+
+  .social {
+    top: 75%;
+    right: 10%;
+  }
+
+  main .container .image {
+    max-width: 280px;
+    display: block;
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
